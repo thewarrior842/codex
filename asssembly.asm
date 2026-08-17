@@ -1,0 +1,27 @@
+global _start
+
+section .text
+_start:
+  mov rax,5
+  mov rbx,4
+  add rax,rbx
+  inc rax
+  dec rax
+  sub rax,2
+ ; Convert into ASCII
+  add rax,'0'
+  mov[result],rax
+  mov byte[result+1],10
+ ; Print the character
+  mov rax, 1          ; syscall 1 = sys_write
+  mov rdi, 1          ; file descriptor 1 = stdout
+  mov rsi, result     ; pointer to memory containing character '7'
+  mov rdx, 2         ; print 1 byte
+  syscall
+  ; Exit program
+  mov rax,60
+  xor rdi, rdi
+  syscall
+
+  section .bss
+  result resb 2
