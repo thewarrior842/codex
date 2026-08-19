@@ -64,8 +64,94 @@
 
     </section>
 
+<!-- =========================
+         SIGN IN / REGISTER
+    ========================== -->
 
+    <section id="authScreen" class="screen">
+        <div class="form-container">
+            <button class="screen-back-btn" id="backAuth">←</button>
+            
+            <div class="brand" style="justify-content: center; margin-bottom: 25px;">
+                <div class="brand-icon">🛡️</div>
+            </div>
 
+            <span class="section-label" style="text-align: center; display: block;">ACCOUNT ACCESS</span>
+            <h2 id="authTitle" style="text-align: center; margin-bottom: 25px;">Sign In</h2>
+
+            <form id="authForm" class="app-form">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                
+                <button type="submit" class="primary-btn form-submit-btn">
+                    CONTINUE <span>→</span>
+                </button>
+            </form>
+
+            <p id="toggleAuthMode" class="auth-toggle">
+                Don't have an account? <strong>Create one</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- =========================
+         MEDICAL & PERSONAL DETAILS
+    ========================== -->
+<!-- =========================
+         MEDICAL & PERSONAL DETAILS
+    ========================== -->
+
+    <section id="profileSetupScreen" class="screen">
+        <div class="form-container">
+            <button class="screen-back-btn" id="backProfile">←</button>
+
+            <div class="form-header">
+                <span class="section-label" style="color: #dc2626;">CRITICAL INFO</span>
+                <h2>Medical Profile</h2>
+                <p class="form-desc">
+                    First responders will use this information during an emergency.
+                </p>
+            </div>
+
+            <form id="profileForm" class="app-form">
+                
+                <div class="input-group">
+                    <label>FULL LEGAL NAME</label>
+                    <input type="text" placeholder="e.g. Jane Doe" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>BLOOD GROUP</label>
+                    <select required class="dropdown-select">
+                        <option value="" disabled selected>Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>MEDICAL CONDITIONS / ALLERGIES</label>
+                    <textarea placeholder="List any known allergies, medications, or conditions (Optional)" rows="3"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>EMERGENCY CONTACT PHONE</label>
+                    <input type="tel" placeholder="e.g. +1 234 567 8900" required>
+                </div>
+                
+                <button type="submit" class="danger-btn form-submit-btn">
+                    SAVE & ENTER DASHBOARD
+                </button>
+            </form>
+        </div>
+    </section>
+    
     <!-- =========================
          DASHBOARD
     ========================== -->
