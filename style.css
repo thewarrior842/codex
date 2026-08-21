@@ -1,0 +1,1968 @@
+/* =========================================
+   LIFELINE SECURITY
+   COMPLETE RESPONSIVE UI
+========================================= */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    color: #172033;
+
+    background:
+        linear-gradient(
+            rgba(12, 20, 38, 0.82),
+            rgba(12, 20, 38, 0.92)
+        ),
+        url("keithjj-mountain-1462655.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+/* ---------- SCREEN SYSTEM ---------- */
+
+.screen {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.screen.active {
+    display: flex;
+}
+
+
+/* ---------- BUTTON RESET ---------- */
+
+button {
+    font-family: inherit;
+}
+
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   WELCOME SCREEN
+========================================= */
+
+#welcomeScreen {
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.welcome-content {
+    width: 100%;
+    max-width: 520px;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 40px 20px;
+}
+
+
+.logo-box {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 30px;
+
+    margin-bottom: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.welcome-tag,
+.section-label {
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+
+.welcome-tag {
+    color: #b8c5dd;
+    margin-bottom: 12px;
+}
+
+
+.welcome-content h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 10vw, 62px);
+
+    letter-spacing: 6px;
+}
+
+
+.welcome-content h2 {
+    font-size: 15px;
+
+    letter-spacing: 10px;
+
+    margin-top: 4px;
+
+    color: #d9e2f2;
+}
+
+
+.welcome-description {
+    max-width: 370px;
+
+    margin: 30px 0;
+
+    color: #c7d1e2;
+
+    line-height: 1.7;
+}
+
+
+.primary-btn {
+    width: 100%;
+    max-width: 390px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 18px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: white;
+
+    color: #172033;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+.primary-btn span {
+    font-size: 22px;
+}
+
+
+.system-status {
+    margin-top: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    color: #b9c5d8;
+}
+
+
+.online-dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #34d399;
+
+    box-shadow:
+        0 0 15px #34d399;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+#dashboardScreen {
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.app-panel {
+    width: 100%;
+    max-width: 950px;
+
+    min-height: auto;
+
+    background:
+        linear-gradient(180deg, #fbfcfe, #ffffff);
+
+    border-radius: 30px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- TOP BAR ---------- */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.brand-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #172033;
+
+    border-radius: 17px;
+
+    font-size: 26px;
+}
+
+
+.brand h2 {
+    font-size: 19px;
+
+    letter-spacing: 1px;
+}
+
+
+.brand p {
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #8a94a6;
+}
+
+
+.profile-btn {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #f3f5f8;
+
+    font-size: 22px;
+}
+
+
+/* ---------- DASHBOARD MAIN ---------- */
+
+.dashboard-main {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding-top: 30px;
+}
+
+
+/* ---------- LOCATION ---------- */
+
+.location-card {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 17px;
+
+    background: white;
+
+    border: 1px solid #e9edf3;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(30, 50, 80, 0.06);
+}
+
+
+.location-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff1f2;
+
+    border-radius: 16px;
+
+    font-size: 24px;
+}
+
+
+.card-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    color: #9aa4b2;
+}
+
+
+.location-card p {
+    font-size: 13px;
+
+    color: #475569;
+
+    word-break: break-word;
+}
+
+
+.refresh-btn {
+    margin-left: auto;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #f3f5f8;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* ---------- SOS ---------- */
+
+.sos-section {
+    padding: 35px 0 10px;
+
+    text-align: center;
+}
+
+
+.emergency-label {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border-radius: 50px;
+
+    background: #fff1f2;
+
+    color: #dc2626;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 30px;
+}
+
+
+#sosButton {
+    width: 200px;
+    height: 200px;
+
+    border: 7px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(145deg, #ff5b61, #be1720);
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 0 12px rgba(220, 38, 38, 0.09),
+        0 20px 50px rgba(220, 38, 38, 0.28);
+
+    animation: sosPulse 2.2s infinite;
+
+    transition: 0.3s;
+}
+
+
+#sosButton:hover {
+    transform: scale(1.05);
+}
+
+
+.sos-main {
+    font-size: 50px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.sos-small {
+    margin-top: 5px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+@keyframes sosPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 12px rgba(220, 38, 38, 0.09),
+            0 20px 50px rgba(220, 38, 38, 0.28);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 20px rgba(220, 38, 38, 0.04),
+            0 25px 60px rgba(220, 38, 38, 0.35);
+    }
+
+}
+
+
+.sos-text {
+    max-width: 290px;
+
+    margin: 30px auto 0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #8a94a6;
+}
+
+
+/* =========================================
+   QUICK HELP
+========================================= */
+
+.right-area {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+
+.section-label {
+    color: #8a94a6;
+}
+
+
+.section-heading h3 {
+    margin-top: 6px;
+
+    font-size: 23px;
+}
+
+
+.help-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+.help-card {
+    min-height: 145px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    text-align: left;
+
+    background: white;
+
+    border: 1px solid #e9edf3;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(30, 50, 80, 0.05);
+
+    transition: 0.3s;
+}
+
+
+.help-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 35px rgba(30, 50, 80, 0.12);
+}
+
+
+.help-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #f5f7fa;
+
+    font-size: 26px;
+}
+
+
+.help-card strong {
+    display: block;
+
+    font-size: 15px;
+
+    color: #172033;
+}
+
+
+.help-card small {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #8a94a6;
+}
+
+
+.medical {
+    border-top: 4px solid #ef4444;
+}
+
+
+.police {
+    border-top: 4px solid #3b82f6;
+}
+
+
+.fire {
+    border-top: 4px solid #f97316;
+}
+
+
+.rescue {
+    border-top: 4px solid #8b5cf6;
+}
+
+
+/* =========================================
+   TRUSTED CONTACTS BUTTON
+========================================= */
+
+.contacts-button {
+    width: 100%;
+    min-height: 86px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    background: white;
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    box-shadow:
+        0 8px 25px rgba(30, 50, 80, 0.06);
+
+    transition: 0.3s;
+}
+
+
+.contacts-button:hover {
+    transform: translateY(-3px);
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+        0 16px 35px rgba(30, 50, 80, 0.12);
+}
+
+
+.contacts-button-icon {
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(135deg, #eef2ff, #e0e7ff);
+
+    border-radius: 17px;
+
+    font-size: 25px;
+}
+
+
+.contacts-button-text {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.contacts-button-text strong {
+    font-size: 16px;
+}
+
+
+.contacts-button-text span {
+    font-size: 12px;
+
+    color: #8a94a6;
+}
+
+
+.contacts-arrow {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f4f6f8;
+
+    font-size: 21px;
+
+    color: #64748b;
+
+    transition: 0.3s;
+}
+
+
+.contacts-button:hover .contacts-arrow {
+    transform: translateX(4px);
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+}
+
+
+/* =========================================
+   TRUSTED CONTACTS PAGE
+========================================= */
+
+#contactsScreen,
+#confirmScreen,
+#successScreen {
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.contacts-page,
+.confirm-page,
+.status-page {
+    width: 100%;
+    max-width: 650px;
+
+    background:
+        linear-gradient(180deg, #fbfcfe, #ffffff);
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.22);
+}
+
+
+.contacts-header {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    margin-bottom: 25px;
+}
+
+
+.contacts-header h2 {
+    margin-top: 5px;
+
+    font-size: 27px;
+}
+
+
+.contacts-header p {
+    margin-top: 6px;
+
+    font-size: 13px;
+
+    color: #8a94a6;
+
+    line-height: 1.5;
+}
+
+
+.back-btn {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 15px;
+
+    background: white;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(30, 50, 80, 0.06);
+
+    transition: 0.3s;
+}
+
+
+.back-btn:hover {
+    transform: translateX(-4px);
+}
+
+
+/* CONTACT */
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.contact-card {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    background: white;
+
+    border: 1px solid #e9edf3;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(30, 50, 80, 0.06);
+
+    transition: 0.3s;
+}
+
+
+.contact-card:hover {
+    transform: translateY(-3px);
+}
+
+
+.contact-avatar {
+    width: 56px;
+    height: 56px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(135deg, #eef2ff, #e0e7ff);
+
+    font-size: 27px;
+}
+
+
+.contact-info {
+    flex: 1;
+}
+
+
+.contact-info h3 {
+    font-size: 16px;
+}
+
+
+.contact-info p {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #8a94a6;
+}
+
+
+.call-btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 16px;
+
+    background:
+        linear-gradient(135deg, #34d399, #16a34a);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(34, 197, 94, 0.22);
+
+    transition: 0.3s;
+}
+
+
+.call-btn:hover {
+    transform: scale(1.08);
+}
+
+
+.add-contact-btn {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    padding: 17px;
+
+    border: 2px dashed #cbd5e1;
+
+    border-radius: 20px;
+
+    background: #f8fafc;
+
+    color: #475569;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.add-contact-btn:hover {
+    background: #eef2ff;
+
+    border-color: #6366f1;
+
+    color: #4f46e5;
+}
+
+
+.plus-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e2e8f0;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   CONFIRM EMERGENCY
+========================================= */
+
+.confirm-page,
+.status-page {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 45px 30px;
+}
+
+
+.confirm-icon {
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(135deg, #ff555d, #b91c1c);
+
+    font-size: 52px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(220, 38, 38, 0.25);
+
+    animation: floatIcon 2s infinite ease-in-out;
+}
+
+
+@keyframes floatIcon {
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+.danger-label {
+    color: #dc2626;
+
+    margin-bottom: 10px;
+}
+
+
+.confirm-page h2,
+.status-page h2 {
+    font-size: 30px;
+}
+
+
+#selectedEmergency {
+    margin-top: 10px;
+
+    font-weight: 700;
+
+    color: #dc2626;
+}
+
+
+.confirm-location {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    text-align: left;
+
+    background: white;
+
+    border: 1px solid #fee2e2;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(220, 38, 38, 0.07);
+}
+
+
+.confirm-location-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #fff1f2;
+
+    font-size: 23px;
+}
+
+
+.confirm-location span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #9aa4b2;
+}
+
+
+.confirm-location p {
+    font-size: 12px;
+
+    color: #475569;
+
+    word-break: break-word;
+}
+
+
+.warning-text {
+    margin: 20px 0;
+
+    padding: 14px;
+
+    border-radius: 15px;
+
+    background: #fff7ed;
+
+    color: #9a3412;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.danger-btn,
+.secondary-btn,
+.dashboard-btn {
+    width: 100%;
+
+    padding: 17px;
+
+    border-radius: 18px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.danger-btn {
+    border: none;
+
+    background:
+        linear-gradient(135deg, #ff4d4d, #c5161d);
+
+    color: white;
+
+    box-shadow:
+        0 12px 25px rgba(220, 38, 38, 0.25);
+}
+
+
+.danger-btn:hover,
+.dashboard-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+.secondary-btn {
+    margin-top: 12px;
+
+    border: 1px solid #dce1e8;
+
+    background: white;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   SUCCESS SCREEN
+========================================= */
+
+.success-icon {
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(135deg, #34d399, #16a34a);
+
+    color: white;
+
+    font-size: 55px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(34, 197, 94, 0.25);
+
+    animation: successPop 0.7s ease;
+}
+
+
+@keyframes successPop {
+
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+.success-label {
+    color: #16a34a;
+
+    margin-bottom: 10px;
+}
+
+
+.status-page > p {
+    max-width: 380px;
+
+    margin-top: 12px;
+
+    color: #8a94a6;
+
+    line-height: 1.6;
+}
+
+
+.success-message {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin: 25px 0;
+
+    padding: 18px;
+
+    text-align: left;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+
+
+.message-icon {
+    font-size: 25px;
+}
+
+
+.success-message strong {
+    font-size: 14px;
+
+    color: #166534;
+}
+
+
+.success-message p {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #4b7b5b;
+
+    line-height: 1.5;
+}
+
+
+.dashboard-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: none;
+
+    background:
+        linear-gradient(135deg, #172033, #334155);
+
+    color: white;
+
+    box-shadow:
+        0 12px 25px rgba(23, 32, 51, 0.2);
+}
+
+
+/* =========================================
+   TABLET / IPAD
+========================================= */
+
+@media screen and (min-width: 768px) {
+
+    .app-panel {
+        padding: 35px;
+    }
+
+
+    .dashboard-main {
+        grid-template-columns: 1fr 1fr;
+
+        align-items: start;
+
+        gap: 45px;
+    }
+
+
+    .welcome-content {
+        min-height: 90vh;
+    }
+
+
+    #sosButton {
+        width: 210px;
+        height: 210px;
+    }
+
+
+    .contacts-page,
+    .confirm-page,
+    .status-page {
+        padding: 40px;
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP / WINDOWS
+========================================= */
+
+@media screen and (min-width: 1024px) {
+
+    #dashboardScreen {
+        padding: 35px;
+    }
+
+
+    .app-panel {
+        padding: 40px 45px;
+    }
+
+
+    .dashboard-main {
+        gap: 60px;
+    }
+
+
+    .help-card {
+        min-height: 150px;
+    }
+
+
+    .contacts-page,
+    .confirm-page,
+    .status-page {
+        max-width: 620px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    #dashboardScreen,
+    #contactsScreen,
+    #confirmScreen,
+    #successScreen {
+        padding: 0;
+    }
+
+
+    .app-panel,
+    .contacts-page,
+    .confirm-page,
+    .status-page {
+        width: 100%;
+        min-height: 100vh;
+
+        border-radius: 0;
+
+        padding: 22px 18px;
+    }
+
+
+    .help-grid {
+        gap: 10px;
+    }
+
+
+    .help-card {
+        min-height: 135px;
+
+        padding: 14px;
+    }
+
+
+    .help-icon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 23px;
+    }
+
+
+    #sosButton {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    .sos-main {
+        font-size: 45px;
+    }
+
+
+    .confirm-page,
+    .status-page {
+        justify-content: center;
+    }
+
+}
+
+/* FIX SOS BUTTON ALIGNMENT */
+
+.sos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sosButton {
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+
+    .emergency-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-card {
+        width: 100%;
+    }
+
+    .sos-section {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+/* UNIVERSAL BACK BUTTON */
+
+.screen-back-btn {
+    width: 46px;
+    height: 46px;
+
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e8edf3;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(30, 50, 80, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.screen-back-btn:hover {
+    transform: translateX(-4px);
+    background: #f5f7fa;
+}
+
+.confirm-page,
+.status-page {
+    position: relative;
+}
+
+@media screen and (max-width: 480px) {
+
+    .screen-back-btn {
+        top: 20px;
+        left: 18px;
+    }
+}
+
+/* SOFT MIST BLUE THEME */
+
+.app-panel,
+.contacts-page,
+.confirm-page,
+.status-page {
+    background: #E9EEF5;
+}
+
+.location-card,
+.help-card,
+.contacts-button,
+.contact-card,
+.confirm-location,
+.success-message {
+    background: #F5F7FA;
+}
+
+.back-btn,
+.back-welcome-btn,
+.screen-back-btn,
+.refresh-btn,
+.secondary-btn {
+    background: #DCE4EE;
+}
+
+.location-card,
+.help-card,
+.contacts-button,
+.contact-card,
+.confirm-location {
+    border-color: #CDD7E3;
+}
+
+/* BACK TO WELCOME BUTTON */
+
+.back-welcome-btn {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #e8edf3;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 18px rgba(30, 50, 80, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.back-welcome-btn:hover {
+    transform: translateX(-4px);
+    background: #f5f7fa;
+}
+
+.top-bar {
+    gap: 15px;
+}
+
+.brand {
+    flex: 1;
+}
+
+/* ===== DESKTOP LAYOUT FIX ===== */
+
+@media screen and (min-width: 1024px) {
+
+    .app-panel {
+        max-width: 950px;
+        min-height: 680px;
+        padding: 40px 50px;
+    }
+
+    .dashboard-main {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 45px;
+        align-items: center;
+    }
+
+    .emergency-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .right-area {
+        justify-content: center;
+    }
+
+    .location-card {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .sos-section {
+        padding-top: 35px;
+    }
+
+    .help-card {
+        min-height: 160px;
+    }
+}
+/* MAIN DASHBOARD */
+.dashboard {
+    width: min(100px, 650px);
+    min-height: 400px;
+    margin: 40px auto;
+    padding: 20px 25px;
+    border-radius: 28px;
+}
+
+/* HEADER */
+.dashboard-header {
+    margin-bottom: 28px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+.logo-text h1 {
+    font-size: 20px;
+}
+
+.logo-text p {
+    font-size: 12px;
+}
+
+/* MAIN CONTENT */
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+/* LOCATION */
+.location-card {
+    height: 75px;
+    padding: 15px 20px;
+    border-radius: 18px;
+}
+
+/* SOS SECTION */
+.sos-section {
+    transform: scale(0.9);
+}
+
+.sos-button {
+    width: 250px;
+    height: 250px;
+    font-size: 48px;
+}
+
+/* EMERGENCY CARDS */
+.emergency-grid {
+    gap: 14px;
+}
+
+.emergency-card {
+    min-height: 130px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.emergency-card h3 {
+    font-size: 16px;
+}
+
+.emergency-card p {
+    font-size: 12px;
+}
+
+/* TRUSTED CONTACT */
+.trusted-contact {
+    margin-top: 18px;
+    padding: 18px 20px;
+    min-height: 65px;
+    border-radius: 18px;
+}
+
+/* =========================================
+   FORMS & AUTHENTICATION SCREENS
+========================================= */
+
+#authScreen, 
+#profileSetupScreen {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background: #E9EEF5;
+    border-radius: 30px;
+    padding: 45px 35px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.22);
+    position: relative;
+}
+
+.app-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.app-form input,
+.app-form select,
+.app-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #CDD7E3;
+    border-radius: 16px;
+    background: #F5F7FA;
+    font-family: inherit;
+    font-size: 14px;
+    color: #172033;
+    outline: none;
+    transition: 0.3s;
+}
+
+.app-form input:focus,
+.app-form select:focus,
+.app-form textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    background: #ffffff;
+}
+
+.dropdown-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a94a6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.app-form textarea {
+    resize: none;
+}
+
+.form-submit-btn {
+    margin-top: 10px;
+    border: none;
+}
+
+.auth-toggle {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #8a94a6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-toggle strong {
+    color: #4f46e5;
+}
+
+.auth-toggle:hover strong {
+    text-decoration: underline;
+}
+/* =========================================
+   FORM IMPROVEMENTS (LABELS & SPACING)
+========================================= */
+
+.form-header {
+    text-align: center;
+    margin-top: 15px; /* Pushes the title down so the back button doesn't hit it */
+    margin-bottom: 30px;
+}
+
+.form-desc {
+    color: #8a94a6;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.app-form {
+    gap: 22px; /* Increases space between each input group */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #64748b;
+    margin-left: 6px;
+}
+
+.form-submit-btn {
+    margin-top: 15px;
+    padding: 18px;
+}
+/* Update the background to Warm Sand */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(180deg, #F9F6F0, #F2EBE1); /* Warm Sand Gradient */
+    border-radius: 30px;
+    padding: 45px 35px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15); /* Softened shadow */
+    position: relative;
+}
+
+/* Warm up the input boxes so they match the new theme */
+.app-form input,
+.app-form select,
+.app-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #E4DCD3; /* Warmer border color */
+    border-radius: 16px;
+    background: #FFFFFF; /* Clean white inputs look best against sand */
+    font-family: inherit;
+    font-size: 14px;
+    color: #2C2724; /* Warmer text color */
+    outline: none;
+    transition: 0.3s;
+}
+
+.app-form input:focus,
+.app-form select:focus,
+.app-form textarea:focus {
+    border-color: #8B735F; /* Warm premium focus color */
+    box-shadow: 0 0 0 4px rgba(139, 115, 95, 0.1);
+}
+/* Matching Premium Button for the Auth Screen */
+#authForm .form-submit-btn {
+    background: #3A312B; /* Deep, rich Espresso/Mocha */
+    color: #F9F6F0; /* Sand colored text */
+    box-shadow: 0 12px 25px rgba(58, 49, 43, 0.2);
+    border: none;
+}
+
+#authForm .form-submit-btn:hover {
+    background: #28211D; /* Slightly darker on hover */
+    transform: translateY(-3px);
+}
+#authScreen .screen-back-btn,
+#profileSetupScreen .screen-back-btn {
+    background: #FFFFFF;
+    border: 1px solid #E4DCD3;
+    color: #3A312B;
+}
+
+#authScreen .screen-back-btn:hover,
+#profileSetupScreen .screen-back-btn:hover {
+    background: #F2EBE1;
+}

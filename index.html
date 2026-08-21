@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lifeline Security</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         WELCOME SCREEN
+    ========================== -->
+
+    <section id="welcomeScreen" class="screen active">
+
+        <div class="welcome-content">
+
+            <div class="logo-box">
+                🛡️
+            </div>
+
+            <p class="welcome-tag">
+                YOUR PERSONAL SAFETY COMPANION
+            </p>
+
+            <h1>LIFELINE</h1>
+
+            <h2>SECURITY</h2>
+
+            <p class="welcome-description">
+                Emergency help and safety assistance when you need it most.
+            </p>
+
+            <button id="getStarted" class="primary-btn">
+                GET STARTED
+                <span>→</span>
+            </button>
+
+
+
+        </div>
+
+    </section>
+
+<!-- =========================
+         SIGN IN / REGISTER
+    ========================== -->
+
+    <section id="authScreen" class="screen">
+        <div class="form-container">
+            <button class="screen-back-btn" id="backAuth">←</button>
+            
+            <div class="brand" style="justify-content: center; margin-bottom: 25px;">
+                <div class="brand-icon">🛡️</div>
+            </div>
+
+            <span class="section-label" style="text-align: center; display: block;">ACCOUNT ACCESS</span>
+            <h2 id="authTitle" style="text-align: center; margin-bottom: 25px;">Sign In</h2>
+
+            <form id="authForm" class="app-form">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                
+                <button type="submit" class="primary-btn form-submit-btn">
+                    CONTINUE <span>→</span>
+                </button>
+            </form>
+
+            <p id="toggleAuthMode" class="auth-toggle">
+                Don't have an account? <strong>Create one</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- =========================
+         MEDICAL & PERSONAL DETAILS
+    ========================== -->
+<!-- =========================
+         MEDICAL & PERSONAL DETAILS
+    ========================== -->
+
+    <section id="profileSetupScreen" class="screen">
+        <div class="form-container">
+            <button class="screen-back-btn" id="backProfile">←</button>
+
+            <div class="form-header">
+                <span class="section-label" style="color: #dc2626;">CRITICAL INFO</span>
+                <h2>Medical Profile</h2>
+                <p class="form-desc">
+                    First responders will use this information during an emergency.
+                </p>
+            </div>
+
+            <form id="profileForm" class="app-form">
+                
+                <div class="input-group">
+                    <label>FULL LEGAL NAME</label>
+                    <input type="text" placeholder="e.g. Jane Doe" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>BLOOD GROUP</label>
+                    <select required class="dropdown-select">
+                        <option value="" disabled selected>Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>MEDICAL CONDITIONS / ALLERGIES</label>
+                    <textarea placeholder="List any known allergies, medications, or conditions (Optional)" rows="3"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>EMERGENCY CONTACT PHONE</label>
+                    <input type="tel" placeholder="e.g. +1 234 567 8900" required>
+                </div>
+                
+                <button type="submit" class="danger-btn form-submit-btn">
+                    SAVE & ENTER DASHBOARD
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <section id="dashboardScreen" class="screen">
+
+        <div class="app-panel">
+
+
+            <!-- HEADER -->
+             <header class="top-bar">
+
+    <button id="backWelcome" class="back-welcome-btn">
+        ←
+    </button>
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            🛡️
+        </div>
+
+        <div>
+            <h2>LIFELINE</h2>
+            <p>Stay Safe. Stay Connected.</p>
+        </div>
+
+    </div>
+
+    <div class="profile-btn">
+        👤
+    </div>
+
+</header>
+
+            <!-- DASHBOARD CONTENT -->
+
+            <main class="dashboard-main">
+
+
+                <!-- LEFT AREA -->
+
+                <div class="emergency-area">
+
+
+                    <!-- LOCATION CARD -->
+
+                    <div class="location-card">
+
+                        <div class="location-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <span class="card-label">
+                                CURRENT LOCATION
+                            </span>
+
+                            <p id="locationText">
+                                Ready to detect your location
+                            </p>
+
+                        </div>
+
+                        <button id="refreshLocation" class="refresh-btn">
+                            ↻
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- SOS -->
+
+                    <div class="sos-section">
+
+                        <div class="emergency-label">
+                            EMERGENCY ASSISTANCE
+                        </div>
+
+                        <button id="sosButton">
+
+                            <span class="sos-main">
+                                SOS
+                            </span>
+
+                            <span class="sos-small">
+                                TAP IN EMERGENCY
+                            </span>
+
+                        </button>
+
+                        <p class="sos-text">
+                            Press SOS to request immediate emergency assistance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT AREA -->
+
+                <div class="right-area">
+
+
+                    <!-- QUICK HELP -->
+
+                    <div class="quick-help">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    QUICK ACCESS
+                                </span>
+
+                                <h3>
+                                    Emergency Services
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="help-grid">
+
+
+                            <button class="help-card medical"
+                                data-emergency="Medical Emergency">
+
+                                <div class="help-icon">
+                                    🚑
+                                </div>
+
+                                <div>
+
+                                    <strong>Medical</strong>
+
+                                    <small>
+                                        Get medical help
+                                    </small>
+
+                                </div>
+
+                            </button>
+
+
+
+                            <button class="help-card police"
+                                data-emergency="Police Emergency">
+
+                                <div class="help-icon">
+                                    👮
+                                </div>
+
+                                <div>
+
+                                    <strong>Police</strong>
+
+                                    <small>
+                                        Report danger
+                                    </small>
+
+                                </div>
+
+                            </button>
+
+
+
+                            <button class="help-card fire"
+                                data-emergency="Fire Emergency">
+
+                                <div class="help-icon">
+                                    🔥
+                                </div>
+
+                                <div>
+
+                                    <strong>Fire</strong>
+
+                                    <small>
+                                        Fire assistance
+                                    </small>
+
+                                </div>
+
+                            </button>
+
+
+
+                            <button class="help-card rescue"
+                                data-emergency="Rescue Emergency">
+
+                                <div class="help-icon">
+                                    🛟
+                                </div>
+
+                                <div>
+
+                                    <strong>Rescue</strong>
+
+                                    <small>
+                                        Request rescue
+                                    </small>
+
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TRUSTED CONTACTS -->
+
+                    <button id="contactsButton" class="contacts-button">
+
+                        <div class="contacts-button-icon">
+                            👥
+                        </div>
+
+                        <div class="contacts-button-text">
+
+                            <strong>
+                                Trusted Contacts
+                            </strong>
+
+                            <span>
+                                Manage your emergency contacts
+                            </span>
+
+                        </div>
+
+                        <div class="contacts-arrow">
+                            →
+                        </div>
+
+                    </button>
+
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TRUSTED CONTACTS
+    ========================== -->
+
+    <section id="contactsScreen" class="screen">
+
+        <div class="contacts-page">
+
+
+            <div class="contacts-header">
+
+                <button id="backContacts" class="back-btn">
+                    ←
+                </button>
+
+                <div>
+
+                    <span class="section-label">
+                        SAFETY NETWORK
+                    </span>
+
+                    <h2>
+                        Trusted Contacts
+                    </h2>
+
+                    <p>
+                        People who can be notified during an emergency.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="contactsList" class="contacts-list">
+
+
+                <div class="contact-card">
+
+                    <div class="contact-avatar">
+                        👩
+                    </div>
+
+                    <div class="contact-info">
+
+                        <h3>
+                            Emergency Contact 1
+                        </h3>
+
+                        <p>
+                            Primary Contact
+                        </p>
+
+                    </div>
+
+                    <button class="call-btn">
+                        📞
+                    </button>
+
+                </div>
+
+
+
+                <div class="contact-card">
+
+                    <div class="contact-avatar">
+                        👨
+                    </div>
+
+                    <div class="contact-info">
+
+                        <h3>
+                            Emergency Contact 2
+                        </h3>
+
+                        <p>
+                            Secondary Contact
+                        </p>
+
+                    </div>
+
+                    <button class="call-btn">
+                        📞
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <button id="addContact" class="add-contact-btn">
+
+                <span class="plus-icon">
+                    +
+                </span>
+
+                Add Trusted Contact
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONFIRM EMERGENCY
+    ========================== -->
+
+    <section id="confirmScreen" class="screen">
+
+        <div class="confirm-page">
+            <button class="screen-back-btn" id="backConfirm">
+               ←
+            </button>
+
+            <div class="confirm-icon">
+                🚨
+            </div>
+
+            <span class="section-label danger-label">
+                EMERGENCY REQUEST
+            </span>
+
+            <h2>
+                Confirm Emergency
+            </h2>
+
+            <p id="selectedEmergency">
+                Emergency Assistance
+            </p>
+
+
+            <div class="confirm-location">
+
+                <div class="confirm-location-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <span>
+                        YOUR LOCATION
+                    </span>
+
+                    <p id="confirmLocation">
+                        Detecting location...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="warning-text">
+
+                Your emergency request will be sent to the appropriate
+                emergency service and your trusted contacts.
+
+            </div>
+
+
+            <button id="sendSOS" class="danger-btn">
+                SEND SOS
+            </button>
+
+
+            <button id="cancelSOS" class="secondary-btn">
+                CANCEL
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SUCCESS SCREEN
+    ========================== -->
+
+    <section id="successScreen" class="screen">
+
+        <div class="status-page">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <span class="section-label success-label">
+                REQUEST SENT
+            </span>
+
+            <h2>
+                Emergency Activated
+            </h2>
+
+            <p>
+                Your emergency request has been successfully submitted.
+            </p>
+
+
+            <div class="success-message">
+
+                <div class="message-icon">
+                    📡
+                </div>
+
+                <div>
+
+                    <strong>
+                        Help has been notified
+                    </strong>
+
+                    <p>
+                        Emergency services and your safety network
+                        have been alerted.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button id="backDashboard" class="dashboard-btn">
+                BACK TO DASHBOARD
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
